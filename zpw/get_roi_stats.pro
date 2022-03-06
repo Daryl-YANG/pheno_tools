@@ -77,7 +77,6 @@ foreach roi, roiLIST do begin
   rgbUSE = match(rgbLIST, dateYMD)
   ; calculate roi stats
   roiSTAT = roistats(roi, rgbUSE, outDIR, fm_roi)
-
 endforeach
 
 print, 'total time used:', floor((systime(1)-startT)/3600), 'h',$
@@ -108,7 +107,6 @@ endfor
 ; return the year month day dataframe
 return,transpose(ymdDATE)
 end
-
 
 function gettimeinfo, rgbLIST
 ;****************************************************************************
