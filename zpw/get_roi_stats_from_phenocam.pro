@@ -1,4 +1,4 @@
-pro get_roi_stats_from_phenocam
+pro get_roi_stats
 ;****************************************************************************
 ; this program is for extracting vegetation indices from time-series phenocam
 ; rgb images. along with vegetation indices, image collection time is also 
