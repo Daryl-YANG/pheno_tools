@@ -234,13 +234,3 @@ file.basename <- gsub(".csv", ".pdf", basename(phenoFILE))
 pdfNAME = paste0(tempDIR, "/", "phenoUNCT_", file.basename)
 ggsave(pdfNAME, plot = last_plot(), width = 12, height = 8, units = 'cm')
 #*****************************************************************************************#
-
-
-
-
-
-
-
-
-
-
