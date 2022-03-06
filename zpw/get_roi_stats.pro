@@ -8,9 +8,9 @@ pro get_roi_stats
 ; phenocamDIR: directory to a folder that contains time-series rgb images 
 ;              collected by a phenocam
 ; roiDIR:  directory to the roi file that contains one or more rois that 
-;          stats need to be extracted. for each roi file, its tile must
+;          stats need to be extracted. for each roi file, its title must
 ;          include the start date and end date that vegetion stats should
-;          be extracted for this roi. the roi fine need to be named in 
+;          be extracted for this roi. the roi file need to be named in 
 ;          the format of  ***_YYYYMMDD_YYYYMMDD, where the firstYYYYMMDD 
 ;          is the start date, and second YYYYMMDD is the end date
 ; output:
