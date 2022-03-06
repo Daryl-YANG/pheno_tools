@@ -178,8 +178,6 @@ endforeach
 return, rgbuseinfo
 end
 
-
-
 function roistats, roi, rgbLIST, outDIR, fm_roi
 ;****************************************************************************
 ; this function extracts rgb and vegetation stastics for each roi inside 
