@@ -27,7 +27,7 @@ invisible(lapply(list.of.packages, library, character.only = TRUE))
 
 #************************************ user parameters ************************************#
 # define an output directory to store outputs
-outDIR <- file.path("/Volumes/Extreme SSD/DSF_LDRD/Data/PlanetScope/KFC/2020/day_mosaic")
+outDIR <- file.path("/Volumes/Extreme SSD/DSF_LDRD/Data/PlanetScope/KFC/2021/day_mosaic")
 # create output directory if not exist
 if (! file.exists(outDIR)) dir.create(outDIR,recursive=TRUE)
 # create an temporary to store files temporarily generated during the course of processing
@@ -43,7 +43,7 @@ str_rm_pattern <- '_psscene_analytic_sr_udm2.zip'
 
 #*************************************** load data ***************************************#
 # define the directory to hdf files
-dataDIR <- file.path("/Volumes/Extreme SSD/DSF_LDRD/Data/PlanetScope/KFC/2020")
+dataDIR <- file.path("/Volumes/Extreme SSD/DSF_LDRD/Data/PlanetScope/KFC/2021")
 # search all hdf files stored in the directory
 zipLIST <- list.files(dataDIR, pattern = '*.zip', recursive = FALSE, all.files = TRUE, 
                       full.names = TRUE)
@@ -108,7 +108,7 @@ for(folder in unzippedLIST)
     # search quality layer and apply mask
     qaDIR <- gsub('AnalyticMS_SR_harmonized', 'udm2', sr_files)
     mosaic.qaRST <- terra::rast(qaDIR)
-    mosaic.qaRST <- terra::project(mosaic.qaRST, crs=outTRS)
+    mosaic.qaRST <- terra::project(mosaic.qaRST, outTRS)
     mosaic.qaRST <- terra::crop(mosaic.qaRST, shpVCT, snap = 'out')
     # create mask
     shadow <- mosaic.qaRST[[3]]
